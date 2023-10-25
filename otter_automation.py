@@ -4,16 +4,12 @@ import datetime
 import os, sys
 
 
-url = "https://otter.ai/signin"
-
-
-
 def main():
     with sync_playwright() as p:
         # create a persistent browser
         browser = p.chromium.launch_persistent_context("browser_data", headless=False)
         page = browser.new_page()
-        page.goto(url)
+        page.goto("https://otter.ai/signin")
         #id=otter-email-input
         # wait for user input, and when they press enter, continue
         input("Please login to your otter account, and then press enter to continue...")
