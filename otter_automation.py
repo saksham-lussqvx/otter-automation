@@ -88,5 +88,4 @@ def main():
                 # close page and browser and auto restart
                 continue
 if __name__ == "__main__":
-    while True:
-        main()
+    main()
